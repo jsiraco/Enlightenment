@@ -5,7 +5,7 @@
 //https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&q=isPublicDomain
 
 fetch('/defaultPoem.js')
-    .then(response => response)
+    .then(response => response.text())
 
 
 
