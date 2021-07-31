@@ -5,9 +5,10 @@
 //https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&q=isPublicDomain
 
 
-//let requestUrl = "https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&q=isPublicDomain"
-let imgContainer = $("#here");
-let requestUrl = `https://collectionapi.metmuseum.org/public/collection/v1/objects/`
+let requestIdUrl = "https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&q=isPublicDomain";
+let imgContainerOne = $("#row-one");
+let imgContainerTwo = $("#row-two");
+let requestUrl = `https://collectionapi.metmuseum.org/public/collection/v1/objects/`;
 const objectIds = [
     437881,
     544864,
@@ -159,50 +160,56 @@ const objectIds = [
     470304
 ]
 
+apiObjects = [];
+
+
+$.ajax({
+    url: requestIdUrl,
+    method: "GET",
+}).then(function (response) {
+    let apiObjects = JSON.stringify(response);
+    console.log(response);
+    localStorage.setItem("objects", apiObjects);
+})
+////////////////////////////////
+
 $.ajax({
     url: requestUrl + objectIds[Math.floor(Math.random() * objectIds.length)],
     method: "GET",
 }).then(function (response) {
-    console.log(response);
-    let testDiv = $("<div class='column testHere'>");
-    let testFigure = $("<figure class='image is-128x128'>");
-    let testSrc = $(`<img src='${response.primaryImageSmall}'>`);
+    let imgDiv = $("<div>").addClass("class='column testHere'");
+    let imgFigure = $("<figure>").addClass("class='image'");
+    let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
 
-    testFigure.append(testSrc);
-    testDiv.append(testFigure);
-    imgContainer.append(testDiv);
+    imgFigure.append(imgSrc);
+    imgDiv.append(imgFigure);
+    imgContainerOne.append(imgDiv);
 });
 
 $.ajax({
     url: requestUrl + objectIds[Math.floor(Math.random() * objectIds.length)],
     method: "GET",
 }).then(function (response) {
+    let imgDiv = $("<div>").addClass("class='column testHere'");
+    let imgFigure = $("<figure>").addClass("class='image'");
+    let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
 
-
-    console.log(response);
-    let testDiv = $("<div class='column testHere'>");
-    let testFigure = $("<figure class='image is-128x128'>");
-    let testSrc = $(`<img src='${response.primaryImageSmall}'>`);
-
-    testFigure.append(testSrc);
-    testDiv.append(testFigure);
-    imgContainer.append(testDiv);
+    imgFigure.append(imgSrc);
+    imgDiv.append(imgFigure);
+    imgContainerOne.append(imgDiv);
 });
 
 $.ajax({
     url: requestUrl + objectIds[Math.floor(Math.random() * objectIds.length)],
     method: "GET",
 }).then(function (response) {
+    let imgDiv = $("<div>").addClass("class='column testHere'");
+    let imgFigure = $("<figure>").addClass("class='image'");
+    let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
 
-
-    console.log(response);
-    let testDiv = $("<div class='column testHere'>");
-    let testFigure = $("<figure class='image is-128x128'>");
-    let testSrc = $(`<img src='${response.primaryImageSmall}'>`);
-
-    testFigure.append(testSrc);
-    testDiv.append(testFigure);
-    imgContainer.append(testDiv);
+    imgFigure.append(imgSrc);
+    imgDiv.append(imgFigure);
+    imgContainerOne.append(imgDiv);
 });
 
 const testImage = [
@@ -435,17 +442,3 @@ const testImage = [
         "GalleryNumber": "455"
     }
 ]
-
-
-$(document).ready(function () {
-
-    for (let i = 0; i < testImage.length; i++) {
-        let testDiv = $("<div class='column testHere'>");
-        let testFigure = $("<figure class='image is-128x128'>");
-        let testSrc = $(`<img src='${testImage[i].primaryImageSmall}'>`);
-
-        testFigure.append(testSrc);
-        testDiv.append(testFigure);
-        imgContainer.append(testDiv);
-    }
-})
