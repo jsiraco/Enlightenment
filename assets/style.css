@@ -6,3 +6,7 @@ body {
 div.column {
   background-color: lightpink;
 }
+
+div.box {
+  background-color: lightblue;
+}
