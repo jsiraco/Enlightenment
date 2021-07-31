@@ -3,4 +3,6 @@ body {
     height: 100vh;
   }
   
-  
+div.column {
+  background-color: lightpink;
+}
