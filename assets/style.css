@@ -3,16 +3,36 @@ body {
     height: 100vh;
   }
 
-.poemTitle {
-  padding: 30%;
-}
+  #enlightenment-title {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
 
-.poemContent {
-  text-align: center;
-  padding-left: 40px;
-  padding-right: 40px;
-  font-style: italic;
-}
+  #poem {
+    display:flex;
+    flex-direction:column;
+  }
+  
+
+  .poemTitle {
+    align-self: flex-start;
+    padding-left: 10%;
+    font-size: 20%;
+    
+  }
+  
+  .poemContent {
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    font-style: italic;
+  }
+  
+  .poemPoet {
+    align-self: flex-end;
+    padding-right: 10%;
+  
+  }
 
 
   
