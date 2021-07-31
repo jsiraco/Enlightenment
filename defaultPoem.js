@@ -1,4 +1,4 @@
-const defaultPoem = [
+/*const defaultPoem = [
     {
         "title": "The Birdland Opera",
         "content": "All my life I had loved music, and rapturous harmonies thrilled my soul,\r\nAs the sound of a wild driving beat, causes eager feet to take control.\r\n\r\nAs a longtime concert pianist, I'd been fortunate to follow my passion,\r\nLike the flower dance of pure sunshine, that never goes out of fashion!\r\n\r\nI not only played at performances, but I frequently played just for fun,\r\nAs the brilliant rainbow laughs at the storm, just as he's come undone.\r\n\r\nMy heart was in beautiful music, and the beautiful music was in my heart,\r\nLike the two who have become wedded, with promises they will never part!\r\n\r\nFamily and friends loved to hear me play, which I did for them ofttimes,\r\nAs the sheer joys of a single afternoon, could be spread over lifetimes.\r\n\r\nI had traveled all over the world, and played in many cities and towns,\r\nJust as the dutiful midnight watchman, is listening for unusual sounds!\r\n\r\nOne sun kissed Saturday I packed a lunch, and left for a secluded beach,\r\nFor when the summertime gets too hot, cool waters are forever in reach.\r\n\r\nI swam and I read and then had lunch, as a youthful afternoon was born,\r\nLike the momentous golden hour, that magenta butterflies become airborne!\r\n\r\nIn summer heat my eyelids grew heavy, as birds sang in bordering trees,\r\nLike night falls in heavy velvetiness, bringing cherry sun to his knees.\r\n\r\nMy slumber was gentle and dreamless, as the sound of the waves rocked me,\r\nAnd I awoke refreshed and happy, for random sea spray had cooled my body.\r\n\r\nWhen I roused at last, I noticed green trees, at the small beach's edge,\r\nAnd I saw bright orange birds singing, on a low branch, by a tall hedge.\r\n\r\nA male bird sang to his ladylove, although she did not appear interested,\r\nSo the male ceased his diligent singing, and preened his feathers instead!\r\n\r\nAt this point I could not look away, for the love scene had intrigued me,\r\nLike being hypnotized by creamy butterflies, in summer's fields of glory.\r\n\r\nThe male bird resumed his singing, hopping and preening between the notes,\r\nAnd golden sunbeams cascaded, amidst gentle waves and sound of speedboats.\r\n\r\nThe female looked more interested, although trying to appear unaffected,\r\nLike dying winter when losing its cool, tries doggedly to seem collected!\r\n\r\nThen suddenly from stage left, another orange male flitted onto the scene,\r\nAnd began enacting his own courtship, rivalling stars of the movie screen!\r\n\r\nHis soliloquy of song was so lovely, that I sat there rapt and delighted,\r\nAnd the female's demeanor was cool, so none could tell what she'd decided.\r\n\r\nSuddenly the first male attacked, in an orange blaze of beak and feathers,\r\nSort of like the views you'd get, in an abrupt change to stormy weather!\r\n\r\nThe second male flew rapidly away, in a flurry of wounded dignity and pride,\r\nLike fireflies when noonday sun is out, necessitating a cool place to hide.\r\n\r\nAfter the unglamorous exit at stage right, the suave courtship was resumed,\r\nAnd the female was finally responding, to the virtuoso singer richly plumed!\r\n\r\nSoon it was obvious they were a pair, and a burnished day was growing old,\r\nNight's curtains soon would be falling, like shooting stars, uncontrolled.\r\n\r\nBetween that day's pink sunrise east, to its vibrantly orange sunset west,\r\nI discovered sometimes love is only returned, after being put to the test!",
@@ -44,4 +44,28 @@ const defaultPoem = [
             "url": "https://www.poemist.com/alicia-suskin-ostriker"
         }
     }
-]
+]*/
+
+let poemHome = $("#poem");
+let requestUrl = `https://www.poemist.com/api/v1/randompoems`
+
+
+$.ajax({
+    url: requestUrl,
+    method: "GET",
+}).then(function (response) {
+    let text1 = response[0].title;
+    let text2 = response[0].content;
+
+    let author = response[0].poet.name;
+
+    let author1 = JSON.stringify(author);
+
+    let txt1 = $("<h1>").addClass("poemTitle").text(text1);
+    let txt2 = $("<p>").addClass("poemContent").text(text2);
+    let txt3 = $("<p>").addClass("poemPoet").text(author1);
+
+    $(poemHome).append(txt1, txt2, txt3);
+});
+
+
