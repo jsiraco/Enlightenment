@@ -2,6 +2,19 @@ body {
     background-color: #f9e9e1;
     height: 100vh;
   }
+
+.poemTitle {
+  padding: 30%;
+}
+
+.poemContent {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-style: italic;
+}
+
+.poemPoet {
   
 div.column {
   background-color: lightpink;
@@ -9,4 +22,5 @@ div.column {
 
 div.box {
   background-color: lightblue;
+
 }

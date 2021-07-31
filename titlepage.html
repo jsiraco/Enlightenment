@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
   <link rel="stylesheet" href="assets\style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>Enlightenment</title>
 </head>
   <header>
@@ -14,9 +15,11 @@
   </header>
     <body>
   <p class="mr-0 pt-3 has-text-centered">
-    <div class= "content has-text-centered">
-        This container is where the <strong><u>Quote of the day</u></strong> will go.
-        </div>
+
+    <div id="poem" class= "content has-text-centered"></div>
+
+    <div class= "content has-text-centered"></div>
+
     </p>
     <p>
       <div class="box has-text-centered">
@@ -24,5 +27,5 @@
       </div>
     </p>
   </body>
-  <script src="assets\deaultPoem.js"></script>
+  <script src="defaultPoem.js"></script>
 </html>
