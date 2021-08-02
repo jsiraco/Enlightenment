@@ -1,6 +1,6 @@
 body {
     background-color: #f9e9e1;
-    height: 100vh;
+    height: 100%;
   }
 
   #enlightenment-title {
@@ -46,5 +46,9 @@ div.box {
 }
 
 div.columns.is-clickable {
+  cursor: pointer;
+}
+
+div.content.is-clickable {
   cursor: pointer;
 }
