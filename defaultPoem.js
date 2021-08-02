@@ -43,7 +43,53 @@ let backupPoem = [
             "name": "Alicia Suskin Ostriker",
             "url": "https://www.poemist.com/alicia-suskin-ostriker"
         }
-    }];
+    },
+    {
+            "title": "Upon The Road Of My Life,",
+            "content": "Upon the road of my life, \nPassed me many fair creatures, \nClothed all in white, and radiant. \nTo one, finally, I made speech: \n\"Who art thou?\" \nBut she, like the others, \nKept cowled her face, \nAnd answered in haste, anxiously, \n\"I am good deed, forsooth; \nYou have often seen me.\" \n\"Not uncowled,\" I made reply. \nAnd with rash and strong hand, \nThough she resisted, \nI drew away the veil \nAnd gazed at the features of vanity. \nShe, shamefaced, went on; \nAnd after I had mused a time, \nI said of myself, \n\"Fool!\"",
+            "url": "https://www.poemist.com/stephen-crane/upon-the-road-of-my-life",
+            "poet": {
+                "name": "Stephen Crane",
+                "url": "https://www.poemist.com/stephen-crane"
+            }
+        },
+    {
+            "title": "Slow Spring",
+            "content": "O year, grow slowly. Exquisite, holy,\nThe days go on\nWith almonds showing the pink stars blowing \nAnd birds in the dawn. \n\nGrow slowly, year, like a child that is dear,\nOr a lamb that is mild,\nBy little steps, and by little skips,\nLike a lamb or a child.",
+            "url": "https://www.poemist.com/katharine-tynan/slow-spring",
+            "poet": {
+                "name": "Katharine Tynan",
+                "url": "https://www.poemist.com/katharine-tynan"
+            }
+        },
+    {
+            "title": "Remote",
+            "content": "When you channel surf\n\ntake care that your mind\n\ndoesn’t drown.",
+            "url": "https://www.poemist.com/peter-bakowski/remote",
+            "poet": {
+                "name": "Peter Bakowski",
+                "url": "https://www.poemist.com/peter-bakowski"
+            }
+        },
+    {
+            "title": "#1",
+            "content": "£",
+            "url": "https://www.poemist.com/a-decadent-girl/foreign-on-earth",
+            "poet": {
+                "name": "love is dead",
+                "url": "https://www.poemist.com/a-decadent-girl"
+            }
+        },
+    {
+            "title": "Lullaby, Go To Sleep",
+            "content": "I'll ne'er forget the day, \nWhen I was young and gay, \nA rolling 'round the floor in Tennessee; \nFrom th' cotton field so white, \nMy ma would come at night, \nAnd fondly hold me in her arms and say: \n\nGo to sleep, baby mine, \nLittle birdie in your nest; \nHumming bees have left the vine, \nGo to sleep and take your rest. \n\nIn winter cold and chill, \nAt night, when all was still, \nI'd wake to find her standing over me, \nA smile upon her face, \nA creepin 'round the place, \nShe'd tuck the cover over me, and sing: \n\nGo to sleep, baby mine, \nLittle birdie in your nest; \nHumming bees have left the vine, \nGo to sleep and take your rest. \n\nSo many years have passed, \nSince we assembled last, \nThat dear old soul has gone away to dwell. \nIf this whole world was mine, \nThe wealth I would decline, \nIf I could only hear my mother sing: \n\nGo to sleep, baby mine, \nLittle birdie in your nest; \nHumming bees have left the vine, \nGo to sleep and take your rest.",
+            "url": "https://www.poemist.com/james-ephraim-mcgirt/lullaby-go-to-sleep",
+            "poet": {
+                "name": "James Ephraim McGirt",
+                "url": "https://www.poemist.com/james-ephraim-mcgirt"
+    }
+        },
+            ];
 
 let poemHome = $("#poem");
 let requestUrl = `https://www.poemist.com/api/v1/randompoems`;
