@@ -168,9 +168,44 @@ favObjects = [];
 
 //Mats: cermaics, furniture, paintings, sculpture, textiles
 //GeoLocation: asia, europe, africa, 
-let materials = "textiles";
+let materials = "&q=textiles";
 
 // console.log(requestIdUrl + `&q=${materials}`);
+
+
+function buildImageRowOne(response) {
+    $.ajax({
+        url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],
+        method: "GET",
+    }).then(function (response) {
+        let imgDiv = $("<div>").addClass("class='column testHere'");
+        let imgFigure = $("<figure>").addClass("class='image'");
+        let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
+
+        imgFigure.append(imgSrc);
+        imgDiv.append(imgFigure);
+        imgContainerOne.append(imgDiv);
+        return apiObjects
+    });
+}
+function buildImageRowTwo(response) {
+    $.ajax({
+        url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],
+        method: "GET",
+    }).then(function (response) {
+        let imgDiv = $("<div>").addClass("class='column testHere'");
+        let imgFigure = $("<figure>").addClass("class='image'");
+        let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
+
+        imgFigure.append(imgSrc);
+        imgDiv.append(imgFigure);
+        imgContainerTwo.append(imgDiv);
+        return apiObjects
+    });
+}
+
+
+
 
 $.ajax({
     url: requestIdUrl,
@@ -179,96 +214,10 @@ $.ajax({
     let apiObjects = JSON.stringify(response);
     localStorage.setItem("objects", apiObjects);
     console.log(response);
+    buildImageRowOne(response);
+    buildImageRowOne(response);
+    buildImageRowTwo(response);
+    buildImageRowTwo(response);
 
-
-
-
-    // $.ajax({
-    //     url: `https://collectionapi.metmuseum.org/public/collection/v1/search?q=sculpture` + objectIds[Math.floor(Math.random() * objectIds.length)],
-    //     method: "GET",
-    // }).then(function (response) {
-    //     let imgDiv = $("<div>").addClass("class='column testHere'");
-    //     let imgFigure = $("<figure>").addClass("class='image'");
-    //     let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
-
-    //     imgFigure.append(imgSrc);
-    //     imgDiv.append(imgFigure);
-    //     imgContainerOne.append(imgDiv);
-    //     return apiObjects
-    // });
+  
 })
-
-//Test fav function here
-$.ajax({
-    url: requestUrl + 465991,
-    method: "GET",
-}).then(function (response) {
-    favObjects = JSON.stringify(response.primaryImageSmall);
-    localStorage.setItem("favPhoto", requestUrl + 465991);
-
-
-    let imgDiv = $("<div>").addClass("class='column testHere'");
-    let imgFigure = $("<figure>").addClass("class='image'");
-    let imgSrc = $(`<img src='${JSON.parse(favObjects)}'>`);
-
-
-    imgFigure.append(imgSrc);
-    imgDiv.append(imgFigure);
-    imgContainerTwo.append(imgDiv);
-    console.log(favObjects);
-});
-
-///////////
-$.ajax({
-    url: requestUrl + objectIds[Math.floor(Math.random() * objectIds.length)],
-    method: "GET",
-}).then(function (response) {
-    let imgDiv = $("<div>").addClass("class='column testHere'");
-    let imgFigure = $("<figure>").addClass("class='image'");
-    let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
-
-    imgFigure.append(imgSrc);
-    imgDiv.append(imgFigure);
-    imgContainerOne.append(imgDiv);
-});
-
-$.ajax({
-    url: requestUrl + objectIds[Math.floor(Math.random() * objectIds.length)],
-    method: "GET",
-}).then(function (response) {
-    let imgDiv = $("<div>").addClass("class='column testHere'");
-    let imgFigure = $("<figure>").addClass("class='image'");
-    let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
-
-    imgFigure.append(imgSrc);
-    imgDiv.append(imgFigure);
-    imgContainerOne.append(imgDiv);
-});
-
-$.ajax({
-    url: requestUrl + objectIds[Math.floor(Math.random() * objectIds.length)],
-    method: "GET",
-}).then(function (response) {
-    let imgDiv = $("<div>").addClass("class='column testHere'");
-    let imgFigure = $("<figure>").addClass("class='image'");
-    let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
-
-    imgFigure.append(imgSrc);
-    imgDiv.append(imgFigure);
-    imgContainerOne.append(imgDiv);
-});
-
-
-$.ajax({
-    url: requestUrl + objectIds[Math.floor(Math.random() * objectIds.length)],
-    method: "GET",
-}).then(function (response) {
-    let imgDiv = $("<div>").addClass("class='column testHere'");
-    let imgFigure = $("<figure>").addClass("class='image'");
-    let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
-
-    imgFigure.append(imgSrc);
-    imgDiv.append(imgFigure);
-    imgContainerTwo.append(imgDiv);
-});
-
