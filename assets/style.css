@@ -44,3 +44,7 @@ div.box {
   background-color: lightblue;
 
 }
+
+div.columns.is-clickable {
+  cursor: pointer;
+}
