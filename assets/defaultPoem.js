@@ -1,4 +1,4 @@
-/*const defaultPoem = [
+let backupPoem = [
     {
         "title": "The Birdland Opera",
         "content": "All my life I had loved music, and rapturous harmonies thrilled my soul,\r\nAs the sound of a wild driving beat, causes eager feet to take control.\r\n\r\nAs a longtime concert pianist, I'd been fortunate to follow my passion,\r\nLike the flower dance of pure sunshine, that never goes out of fashion!\r\n\r\nI not only played at performances, but I frequently played just for fun,\r\nAs the brilliant rainbow laughs at the storm, just as he's come undone.\r\n\r\nMy heart was in beautiful music, and the beautiful music was in my heart,\r\nLike the two who have become wedded, with promises they will never part!\r\n\r\nFamily and friends loved to hear me play, which I did for them ofttimes,\r\nAs the sheer joys of a single afternoon, could be spread over lifetimes.\r\n\r\nI had traveled all over the world, and played in many cities and towns,\r\nJust as the dutiful midnight watchman, is listening for unusual sounds!\r\n\r\nOne sun kissed Saturday I packed a lunch, and left for a secluded beach,\r\nFor when the summertime gets too hot, cool waters are forever in reach.\r\n\r\nI swam and I read and then had lunch, as a youthful afternoon was born,\r\nLike the momentous golden hour, that magenta butterflies become airborne!\r\n\r\nIn summer heat my eyelids grew heavy, as birds sang in bordering trees,\r\nLike night falls in heavy velvetiness, bringing cherry sun to his knees.\r\n\r\nMy slumber was gentle and dreamless, as the sound of the waves rocked me,\r\nAnd I awoke refreshed and happy, for random sea spray had cooled my body.\r\n\r\nWhen I roused at last, I noticed green trees, at the small beach's edge,\r\nAnd I saw bright orange birds singing, on a low branch, by a tall hedge.\r\n\r\nA male bird sang to his ladylove, although she did not appear interested,\r\nSo the male ceased his diligent singing, and preened his feathers instead!\r\n\r\nAt this point I could not look away, for the love scene had intrigued me,\r\nLike being hypnotized by creamy butterflies, in summer's fields of glory.\r\n\r\nThe male bird resumed his singing, hopping and preening between the notes,\r\nAnd golden sunbeams cascaded, amidst gentle waves and sound of speedboats.\r\n\r\nThe female looked more interested, although trying to appear unaffected,\r\nLike dying winter when losing its cool, tries doggedly to seem collected!\r\n\r\nThen suddenly from stage left, another orange male flitted onto the scene,\r\nAnd began enacting his own courtship, rivalling stars of the movie screen!\r\n\r\nHis soliloquy of song was so lovely, that I sat there rapt and delighted,\r\nAnd the female's demeanor was cool, so none could tell what she'd decided.\r\n\r\nSuddenly the first male attacked, in an orange blaze of beak and feathers,\r\nSort of like the views you'd get, in an abrupt change to stormy weather!\r\n\r\nThe second male flew rapidly away, in a flurry of wounded dignity and pride,\r\nLike fireflies when noonday sun is out, necessitating a cool place to hide.\r\n\r\nAfter the unglamorous exit at stage right, the suave courtship was resumed,\r\nAnd the female was finally responding, to the virtuoso singer richly plumed!\r\n\r\nSoon it was obvious they were a pair, and a burnished day was growing old,\r\nNight's curtains soon would be falling, like shooting stars, uncontrolled.\r\n\r\nBetween that day's pink sunrise east, to its vibrantly orange sunset west,\r\nI discovered sometimes love is only returned, after being put to the test!",
@@ -43,11 +43,56 @@
             "name": "Alicia Suskin Ostriker",
             "url": "https://www.poemist.com/alicia-suskin-ostriker"
         }
+    },
+    {
+            "title": "Upon The Road Of My Life,",
+            "content": "Upon the road of my life, \nPassed me many fair creatures, \nClothed all in white, and radiant. \nTo one, finally, I made speech: \n\"Who art thou?\" \nBut she, like the others, \nKept cowled her face, \nAnd answered in haste, anxiously, \n\"I am good deed, forsooth; \nYou have often seen me.\" \n\"Not uncowled,\" I made reply. \nAnd with rash and strong hand, \nThough she resisted, \nI drew away the veil \nAnd gazed at the features of vanity. \nShe, shamefaced, went on; \nAnd after I had mused a time, \nI said of myself, \n\"Fool!\"",
+            "url": "https://www.poemist.com/stephen-crane/upon-the-road-of-my-life",
+            "poet": {
+                "name": "Stephen Crane",
+                "url": "https://www.poemist.com/stephen-crane"
+            }
+        },
+    {
+            "title": "Slow Spring",
+            "content": "O year, grow slowly. Exquisite, holy,\nThe days go on\nWith almonds showing the pink stars blowing \nAnd birds in the dawn. \n\nGrow slowly, year, like a child that is dear,\nOr a lamb that is mild,\nBy little steps, and by little skips,\nLike a lamb or a child.",
+            "url": "https://www.poemist.com/katharine-tynan/slow-spring",
+            "poet": {
+                "name": "Katharine Tynan",
+                "url": "https://www.poemist.com/katharine-tynan"
+            }
+        },
+    {
+            "title": "Remote",
+            "content": "When you channel surf\n\ntake care that your mind\n\ndoesn’t drown.",
+            "url": "https://www.poemist.com/peter-bakowski/remote",
+            "poet": {
+                "name": "Peter Bakowski",
+                "url": "https://www.poemist.com/peter-bakowski"
+            }
+        },
+    {
+            "title": "#1",
+            "content": "£",
+            "url": "https://www.poemist.com/a-decadent-girl/foreign-on-earth",
+            "poet": {
+                "name": "love is dead",
+                "url": "https://www.poemist.com/a-decadent-girl"
+            }
+        },
+    {
+            "title": "Lullaby, Go To Sleep",
+            "content": "I'll ne'er forget the day, \nWhen I was young and gay, \nA rolling 'round the floor in Tennessee; \nFrom th' cotton field so white, \nMy ma would come at night, \nAnd fondly hold me in her arms and say: \n\nGo to sleep, baby mine, \nLittle birdie in your nest; \nHumming bees have left the vine, \nGo to sleep and take your rest. \n\nIn winter cold and chill, \nAt night, when all was still, \nI'd wake to find her standing over me, \nA smile upon her face, \nA creepin 'round the place, \nShe'd tuck the cover over me, and sing: \n\nGo to sleep, baby mine, \nLittle birdie in your nest; \nHumming bees have left the vine, \nGo to sleep and take your rest. \n\nSo many years have passed, \nSince we assembled last, \nThat dear old soul has gone away to dwell. \nIf this whole world was mine, \nThe wealth I would decline, \nIf I could only hear my mother sing: \n\nGo to sleep, baby mine, \nLittle birdie in your nest; \nHumming bees have left the vine, \nGo to sleep and take your rest.",
+            "url": "https://www.poemist.com/james-ephraim-mcgirt/lullaby-go-to-sleep",
+            "poet": {
+                "name": "James Ephraim McGirt",
+                "url": "https://www.poemist.com/james-ephraim-mcgirt"
     }
-]*/
+        },
+            ];
 
 let poemHome = $("#poem");
-let requestPoemUrl = `https://www.poemist.com/api/v1/randompoems`
+let requestPoemUrl = `https://www.poemist.com/api/v1/randompoems`;
 
 
 $.ajax({
@@ -66,6 +111,19 @@ $.ajax({
     let txt3 = $("<p>").addClass("poemPoet").text(author1);
 
     $(poemHome).append(txt1, txt2, txt3);
-});
+}) .catch(backup());
 
+function backup() {
+    let bu1 = backupPoem[Math.floor(Math.random() * objectIds.length)].title;
+    let bu2 = backupPoem[Math.floor(Math.random() * objectIds.length)].content;
+    let buAuthor = backupPoem[Math.floor(Math.random() * objectIds.length)].poet.name;
 
+    let buAuthor1 = JSON.stringify(buAuthor);
+
+    let txt1 = $("<h1>").addClass("poemTitle").text(bu1);
+    let txt2 = $("<p>").addClass("poemContent").text(bu2);
+    let txt3 = $("<p>").addClass("poemPoet").text(buAuthor1);
+
+    $(poemHome).append(txt1, txt2, txt3);
+
+}

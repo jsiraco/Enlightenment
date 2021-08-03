@@ -1,7 +1,42 @@
 body {
-    background-color: #f9e9e1;
-    height: 100%;
+    /*background-color: #f9e9e1;*/
+      background-image: url('https://i.imgur.com/uKYGjV5.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    height: 100vh;
   }
+
+#enlightenment-title {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#poem {
+  display:flex;
+  flex-direction:column;
+}
+
+.poemTitle {
+  align-self: flex-start;
+  padding-left: 10%;
+  font-size: 20%;
+  
+}
+
+.poemContent {
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+  font-style: italic;
+  font-size: 120%
+}
+
+.poemPoet {
+  align-self: flex-end;
+  padding-right: 10%;
+
+}
 
   #enlightenment-title {
     padding-top: 5%;
