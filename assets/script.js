@@ -22,6 +22,7 @@ let geoLocation = "";
 //let materials = "&textiles";
 let materials = "";
 
+
 // console.log(requestIdUrl + `&q=${materials}`);
 
 function onPageLoad() {
@@ -32,6 +33,8 @@ function onPageLoad() {
 }
 
 
+
+///////Builds the first row of images
 function buildImageRowOne(response) {
     $.ajax({
         url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],
@@ -54,6 +57,7 @@ function buildImageRowOne(response) {
     });
 }
 
+//Builds the second row of images
 function buildImageRowTwo(response) {
     $.ajax({
         url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],
@@ -63,7 +67,6 @@ function buildImageRowTwo(response) {
         let imgDiv = $("<div>").addClass("class='column testHere'");
         let imgFigure = $("<figure>").addClass("class='image'");
         let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
-
         imgFigure.append(imgSrc, testBtn);
         imgDiv.append(imgFigure);
         imgContainerTwo.append(imgDiv);
@@ -76,7 +79,7 @@ function buildImageRowTwo(response) {
     });
 }
 
-
+//Calls the building functions and calls the initial ajax calls
 $.ajax({
     url: requestIdUrl + materials + geoLocation,
     method: "GET",
