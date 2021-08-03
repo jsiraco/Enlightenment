@@ -24,7 +24,12 @@ let materials = "";
 
 // console.log(requestIdUrl + `&q=${materials}`);
 
-
+function onPageLoad() {
+    let storedFavs = JSON.parse(localStorage.getItem("likes"));
+    if (storedFavs !== null) {
+        favObjects = storedFavs;
+    }
+}
 
 
 function buildImageRowOne(response) {
@@ -32,13 +37,19 @@ function buildImageRowOne(response) {
         url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],
         method: "GET",
     }).then(function (response) {
+        let testBtn = $("<button>").addClass("button").html("Like");
         let imgDiv = $("<div>").addClass("class='column testHere'");
         let imgFigure = $("<figure>").addClass("class='image'");
         let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
 
-        imgFigure.append(imgSrc);
+        imgFigure.append(imgSrc, testBtn);
         imgDiv.append(imgFigure);
         imgContainerOne.append(imgDiv);
+        testBtn.on("click", function () {
+            console.log("like");
+            favObjects.push(JSON.stringify(response.primaryImageSmall));
+            localStorage.setItem("likes", favObjects);
+        })
         return apiObjects
     });
 }
@@ -48,13 +59,19 @@ function buildImageRowTwo(response) {
         url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],
         method: "GET",
     }).then(function (response) {
+        let testBtn = $("<button>").addClass("button").html("Like");
         let imgDiv = $("<div>").addClass("class='column testHere'");
         let imgFigure = $("<figure>").addClass("class='image'");
         let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
 
-        imgFigure.append(imgSrc);
+        imgFigure.append(imgSrc, testBtn);
         imgDiv.append(imgFigure);
         imgContainerTwo.append(imgDiv);
+        testBtn.on("click", function () {
+            favObjects.push(JSON.stringify(response.primaryImageSmall));
+            localStorage.setItem("likes", favObjects);
+            console.log("like");
+        })
         return apiObjects
     });
 }
@@ -64,17 +81,11 @@ $.ajax({
     url: requestIdUrl + materials + geoLocation,
     method: "GET",
 }).then(function (response) {
-    let apiObjects = JSON.stringify(response);
-    localStorage.setItem("objects", apiObjects);
     console.log(response);
-    buildImageRowOne(response);
-    buildImageRowOne(response);
-    buildImageRowOne(response);
-    buildImageRowOne(response);
-    buildImageRowTwo(response);
-    buildImageRowTwo(response);
-    buildImageRowTwo(response);
-    buildImageRowTwo(response);
-
-  
+    for (let i = 0; i < 4; i++) {
+        buildImageRowOne(response);
+        buildImageRowTwo(response);
+    }
 })
+
+onPageLoad();
