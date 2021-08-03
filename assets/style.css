@@ -1,5 +1,9 @@
 body {
-    background-color: #f9e9e1;
+    /*background-color: #f9e9e1;*/
+      background-image: url('https://i.imgur.com/Rf9R81C.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     height: 100vh;
   }
 
