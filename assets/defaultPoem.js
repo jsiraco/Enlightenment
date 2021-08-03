@@ -92,7 +92,7 @@ let backupPoem = [
             ];
 
 let poemHome = $("#poem");
-let requestUrl = `https://www.poemist.com/api/v1/randompoems`;
+let requestPoemUrl = `https://www.poemist.com/api/v1/randompoems`;
 
 
 $.ajax({
