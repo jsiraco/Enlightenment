@@ -96,7 +96,7 @@ let requestUrl = `https://www.poemist.com/api/v1/randompoems`;
 
 
 $.ajax({
-    url: requestUrl,
+    url: requestPoemUrl,
     method: "GET",
 }).then(function (response) {
     let text1 = response[0].title;

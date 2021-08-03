@@ -37,6 +37,39 @@ body {
   padding-right: 10%;
 
 }
+
+  #enlightenment-title {
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  #poem {
+    display:flex;
+    flex-direction:column;
+  }
+  
+
+  .poemTitle {
+    align-self: flex-start;
+    padding-left: 10%;
+    font-size: 20%;
+    
+  }
+  
+  .poemContent {
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+    font-style: italic;
+  }
+  
+  .poemPoet {
+    align-self: flex-end;
+    padding-right: 10%;
+  
+  }
+
+
   
 div.column {
   background-color: lightpink;
@@ -45,4 +78,12 @@ div.column {
 div.box {
   background-color: lightblue;
 
+}
+
+div.columns.is-clickable {
+  cursor: pointer;
+}
+
+div.content.is-clickable {
+  cursor: pointer;
 }
