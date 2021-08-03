@@ -50,7 +50,7 @@ function buildImageRowOne(response) {
         imgContainerOne.append(imgDiv);
         testBtn.on("click", function () {
             console.log("like");
-            favObjects.push(JSON.stringify(response.primaryImageSmall));
+            JSON.stringify(favObjects.push(response.primaryImageSmall));
             localStorage.setItem("likes", favObjects);
         })
         return apiObjects
@@ -71,7 +71,7 @@ function buildImageRowTwo(response) {
         imgDiv.append(imgFigure);
         imgContainerTwo.append(imgDiv);
         testBtn.on("click", function () {
-            favObjects.push(JSON.stringify(response.primaryImageSmall));
+            JSON.stringify(favObjects.push(response.primaryImageSmall));
             localStorage.setItem("likes", favObjects);
             console.log("like");
         })
