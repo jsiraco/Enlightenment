@@ -125,5 +125,6 @@ function backup() {
     let txt3 = $("<p>").addClass("poemPoet").text(buAuthor1);
 
     $(poemHome).append(txt1, txt2, txt3);
+    console.log("Too many requests, here's a default poem!");
 
 }
