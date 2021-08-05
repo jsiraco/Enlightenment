@@ -114,9 +114,9 @@ $.ajax({
 }) .catch(backup());
 
 function backup() {
-    let bu1 = backupPoem[Math.floor(Math.random() * objectIds.length)].title;
-    let bu2 = backupPoem[Math.floor(Math.random() * objectIds.length)].content;
-    let buAuthor = backupPoem[Math.floor(Math.random() * objectIds.length)].poet.name;
+    let bu1 = backupPoem[Math.floor(Math.random() * backupPoem.length)].title;
+    let bu2 = backupPoem[Math.floor(Math.random() * backupPoem.length)].content;
+    let buAuthor = backupPoem[Math.floor(Math.random() * backupPoem.length)].poet.name;
 
     let buAuthor1 = JSON.stringify(buAuthor);
 
@@ -125,5 +125,6 @@ function backup() {
     let txt3 = $("<p>").addClass("poemPoet").text(buAuthor1);
 
     $(poemHome).append(txt1, txt2, txt3);
+    console.log("Too many requests, here's a default poem!");
 
 }
