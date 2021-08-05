@@ -5,10 +5,13 @@
 //https://collectionapi.metmuseum.org/public/collection/v1/search?q=textiles&q=isPublicDomain
 //&q=
 
-let requestIdUrl = `https://collectionapi.metmuseum.org/public/collection/v1/search?q=isPublicDomain`;
+let requestIdUrl = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=isPublicDomain"
 let imgContainerOne = $("#row-one");
 let imgContainerTwo = $("#row-two");
 let requestUrl = `https://collectionapi.metmuseum.org/public/collection/v1/objects/`;
+let materials = "";
+let geoLocation = "";
+let era = "";
 
 
 apiObjects = [];
@@ -18,9 +21,42 @@ favObjects = [];
 //Mats: cermaics, furniture, paintings, sculpture, textiles
 //GeoLocation: asia, europe, africa, 
 
-let geoLocation = "";
-//let materials = "&textiles";
-let materials = "";
+$("#discoverSearch").on("click", function() {
+
+    //location.reload();
+    
+    let eraRaw = document.getElementById("medium");
+        let eraResult= eraRaw.options[eraRaw.selectedIndex].value;
+
+    let materialRaw = document.getElementById("type-materials");
+        let materialResult = materialRaw.options[materialRaw.selectedIndex].value;
+
+    let locationRaw = document.getElementById("areas");
+        let locationResult = locationRaw.options[locationRaw.selectedIndex].value;
+    
+    let materials = "&" + materialResult;
+    let geoLocation ="&" + locationResult;
+    let era = "&" + eraResult;
+    console.log(eraResult)
+
+    $.ajax({
+        url: requestIdUrl + era + geoLocation + materials,
+        method: "GET",
+    }).then(function (response) {
+        console.log(response);
+        for (let i = 0; i < 4; i++) {
+            buildImageRowOne(response);
+            buildImageRowTwo(response);
+        }
+    })
+    let tester = requestIdUrl + era + geoLocation + materials;
+    console.log(tester);
+});
+
+
+
+
+
 
 
 // console.log(requestIdUrl + `&q=${materials}`);
@@ -83,7 +119,7 @@ function buildImageRowTwo(response) {
 
 //Calls the building functions and calls the initial ajax calls
 $.ajax({
-    url: requestIdUrl + materials + geoLocation,
+    url: requestIdUrl,
     method: "GET",
 }).then(function (response) {
     console.log(response);
