@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-image: url('https://i.imgur.com/uKYGjV5.png');
+  background-image: url("./background-enlightenment.png");
   background-repeat: no-repeat;
   background-position: center center;
   height: 100vh;
@@ -70,10 +70,6 @@ body {
   align-self: flex-end;
   padding-right: 10%;
 }
-
-/* div.column {
-  background-color: lightpink;
-} */
 
 div.box {
   background-color: lightblue;
