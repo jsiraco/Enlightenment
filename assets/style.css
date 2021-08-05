@@ -1,5 +1,8 @@
-body {
+html {
   background-color: #f9e9e1;
+}
+
+body {
   background-image: url('https://i.imgur.com/uKYGjV5.png');
   background-repeat: no-repeat;
   background-position: center center;
@@ -86,7 +89,6 @@ div.content.is-clickable {
 
 img.spaced-image {
   justify-content: space-between;
-  border: 10px solid rgba(165, 42, 42, 0.377);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   filter: drop-shadow(10px 10px 4px rgb(65, 65, 65));

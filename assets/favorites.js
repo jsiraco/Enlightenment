@@ -19,7 +19,7 @@ function buildRows(event) {
 function loadImages() {
     if (favObjects.length == 0) {
         nofavs.removeClass("no-favorites-yet");
-        
+
     }
     let uniqueFavs = favObjects.filter((v, i, a,) => a.indexOf(v) === i);
     for (let i = 0; i < uniqueFavs.length; i++) {
@@ -33,7 +33,7 @@ function loadImages() {
         favContainter.append(imgDiv);
 
         imgSrc.on("click", function () {
-           // window.open(response.objectURL, "_blank");
+            window.open(uniqueFavs[i], "_blank");
             console.log("click");
         })
 
