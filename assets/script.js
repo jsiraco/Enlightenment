@@ -21,21 +21,21 @@ favObjects = [];
 //Mats: cermaics, furniture, paintings, sculpture, textiles
 //GeoLocation: asia, europe, africa, 
 
-$("#discoverSearch").on("click", function() {
+$("#discoverSearch").on("click", function () {
 
     //location.reload();
-    
+
     let eraRaw = document.getElementById("medium");
-        let eraResult= eraRaw.options[eraRaw.selectedIndex].value;
+    let eraResult = eraRaw.options[eraRaw.selectedIndex].value;
 
     let materialRaw = document.getElementById("type-materials");
-        let materialResult = materialRaw.options[materialRaw.selectedIndex].value;
+    let materialResult = materialRaw.options[materialRaw.selectedIndex].value;
 
     let locationRaw = document.getElementById("areas");
-        let locationResult = locationRaw.options[locationRaw.selectedIndex].value;
-    
+    let locationResult = locationRaw.options[locationRaw.selectedIndex].value;
+
     let materials = "&" + materialResult;
-    let geoLocation ="&" + locationResult;
+    let geoLocation = "&" + locationResult;
     let era = "&" + eraResult;
     console.log(eraResult)
 
@@ -76,15 +76,26 @@ function buildImageRowOne(response) {
         url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],
         method: "GET",
     }).then(function (response) {
-        let testBtn = $("<button>").addClass("button").html("Like");
-        let imgDiv = $("<div>").addClass("class='column testHere'");
-        let imgFigure = $("<figure>").addClass("class='image'");
-        let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
+        let testBtn = $("<button>").addClass("button is-fullwidth is-light is-primary").html("🖤");
+        let imgDiv = $("<div>").addClass("column testHere is-clickable");
+        let imgFigure = $("<figure>").addClass("image");
+        let imgSrc = $(`<img src='${response.primaryImageSmall}'>`).addClass("spaced-image");
+
+        if (favObjects.includes(response.primaryImageSmall)) {
+            testBtn.html("❤️")
+        }
 
         imgFigure.append(imgSrc, testBtn);
         imgDiv.append(imgFigure);
         imgContainerOne.append(imgDiv);
+
+        imgSrc.on("click", function () {
+            window.open(response.objectURL, "_blank");
+            console.log("click");
+        })
+
         testBtn.on("click", function () {
+            testBtn.html("❤️");
             console.log("like");
             favObjects.push(response.primaryImageSmall);
             localStorage.setItem("likes", JSON.stringify(favObjects));
@@ -99,25 +110,36 @@ function buildImageRowTwo(response) {
         url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],
         method: "GET",
     }).then(function (response) {
-        let testBtn = $("<button>").addClass("button").html("Like");
-        let imgDiv = $("<div>").addClass("class='column testHere'");
-        let imgFigure = $("<figure>").addClass("class='image'");
-        let imgSrc = $(`<img src='${response.primaryImageSmall}'>`);
+        let testBtn = $("<button>").addClass("button is-fullwidth is-primary is-light").html("🖤");
+        let imgDiv = $("<div>").addClass("column testHere is-clickable");
+        let imgFigure = $("<figure>").addClass("image");
+        let imgSrc = $(`<img src='${response.primaryImageSmall}'>`).addClass("spaced-image");
+
+        if (favObjects.includes(response.primaryImageSmall)) {
+            testBtn.html("❤️")
+        }
+
         imgFigure.append(imgSrc, testBtn);
         imgDiv.append(imgFigure);
         imgContainerTwo.append(imgDiv);
+
         testBtn.on("click", function () {
+            testBtn.html("❤️");
             favObjects.push(response.primaryImageSmall);
             localStorage.setItem("likes", JSON.stringify(favObjects));
             console.log("like");
         })
+
+        imgSrc.on("click", function () {
+            window.open(response.objectURL, "_blank");
+            console.log("click");
+        })
+
         return apiObjects
-    }).catch(function() {
-        console.log("thats a lot of requests");
-    });
+    })
 }
 
-//Calls the building functions and calls the initial ajax calls
+//Calls the building functions and the initial ajax calls
 $.ajax({
     url: requestIdUrl,
     method: "GET",
@@ -127,6 +149,8 @@ $.ajax({
         buildImageRowOne(response);
         buildImageRowTwo(response);
     }
-})
+}).catch(function () {
+    console.log("thats a lot of requests");
+});
 
 onPageLoad();

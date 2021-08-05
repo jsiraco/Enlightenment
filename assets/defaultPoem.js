@@ -106,9 +106,9 @@ $.ajax({
 
     let author1 = JSON.stringify(author);
 
-    let txt1 = $("<h1>").addClass("poemTitle").text(text1);
-    let txt2 = $("<p>").addClass("poemContent").text(text2);
-    let txt3 = $("<p>").addClass("poemPoet").text(author1);
+    let txt1 = $("<h1>").addClass("poemTitle").html(text1);
+    let txt2 = $("<p>").addClass("poemContent").html(text2);
+    let txt3 = $("<p>").addClass("poemPoet").html(author1);
 
     $(poemHome).append(txt1, txt2, txt3);
 }) .catch(backup());
@@ -120,11 +120,11 @@ function backup() {
 
     let buAuthor1 = JSON.stringify(buAuthor);
 
-    let txt1 = $("<h1>").addClass("poemTitle").text(bu1);
-    let txt2 = $("<p>").addClass("poemContent").text(bu2);
-    let txt3 = $("<p>").addClass("poemPoet").text(buAuthor1);
+    let txt1 = $("<h1>").addClass("poemTitle").html(bu1);
+    let txt2 = $("<p>").addClass("poemContent").html(bu2);
+    let txt3 = $("<p>").addClass("poemPoet").html(buAuthor1);
 
     $(poemHome).append(txt1, txt2, txt3);
-    console.log("Too many requests, here's a default poem!");
+    console.log("Too many requests!");
 
 }

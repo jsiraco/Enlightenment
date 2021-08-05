@@ -1,27 +1,30 @@
 body {
-    /*background-color: #f9e9e1;*/
-      background-image: url('https://i.imgur.com/uKYGjV5.png');
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-  }
+  background-color: #f9e9e1;
+  background-image: url('https://i.imgur.com/uKYGjV5.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
 
 #enlightenment-title {
   padding-top: 5%;
   padding-bottom: 5%;
 }
 
+.enlightenment-title {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
 #poem {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
 .poemTitle {
   align-self: flex-start;
   padding-left: 10%;
   font-size: 20%;
-  
 }
 
 .poemContent {
@@ -35,49 +38,42 @@ body {
 .poemPoet {
   align-self: flex-end;
   padding-right: 10%;
-
 }
 
-  #enlightenment-title {
-    padding-top: 5%;
-    padding-bottom: 5%;
-  }
+#enlightenment-title {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 
-  #poem {
-    display:flex;
-    flex-direction:column;
-  }
-  
+#poem {
+  display: flex;
+  flex-direction: column;
+}
 
-  .poemTitle {
-    align-self: flex-start;
-    padding-left: 10%;
-    font-size: 20%;
-    
-  }
-  
-  .poemContent {
-    text-align: center;
-    padding-left: 30%;
-    padding-right: 30%;
-    font-style: italic;
-  }
-  
-  .poemPoet {
-    align-self: flex-end;
-    padding-right: 10%;
-  
-  }
+.poemTitle {
+  align-self: flex-start;
+  padding-left: 10%;
+  font-size: 20%;
+}
 
+.poemContent {
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 30%;
+  font-style: italic;
+}
 
-  
-div.column {
+.poemPoet {
+  align-self: flex-end;
+  padding-right: 10%;
+}
+
+/* div.column {
   background-color: lightpink;
-}
+} */
 
 div.box {
   background-color: lightblue;
-
 }
 
 div.columns.is-clickable {
@@ -86,4 +82,20 @@ div.columns.is-clickable {
 
 div.content.is-clickable {
   cursor: pointer;
+}
+
+img.spaced-image {
+  justify-content: space-between;
+  border: 10px solid rgba(165, 42, 42, 0.377);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  filter: drop-shadow(10px 10px 4px rgb(65, 65, 65));
+}
+
+figure.image:hover {
+  cursor: pointer;
+}
+
+h2.no-favorites-yet {
+  display: none;
 }
