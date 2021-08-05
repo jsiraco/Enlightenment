@@ -50,8 +50,8 @@ function buildImageRowOne(response) {
         imgContainerOne.append(imgDiv);
         testBtn.on("click", function () {
             console.log("like");
-            JSON.stringify(favObjects.push(response.primaryImageSmall));
-            localStorage.setItem("likes", favObjects);
+            favObjects.push(response.primaryImageSmall);
+            localStorage.setItem("likes", JSON.stringify(favObjects));
         })
         return apiObjects
     });
@@ -71,11 +71,13 @@ function buildImageRowTwo(response) {
         imgDiv.append(imgFigure);
         imgContainerTwo.append(imgDiv);
         testBtn.on("click", function () {
-            JSON.stringify(favObjects.push(response.primaryImageSmall));
-            localStorage.setItem("likes", favObjects);
+            favObjects.push(response.primaryImageSmall);
+            localStorage.setItem("likes", JSON.stringify(favObjects));
             console.log("like");
         })
         return apiObjects
+    }).catch(function() {
+        console.log("thats a lot of requests");
     });
 }
 
