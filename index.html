@@ -5,96 +5,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="assets\style.css">
   <title>Enlightenment</title>
-  <link rel="shortcut icon" type="image/png" href="assets/enlightenment.png"/>
+  <link rel="shortcut icon" type="image/png" href="assets/enlightenment.png" />
 </head>
 
 <body>
   <header class="container">
     <!-- HEADINGS -->
     <div class="block">
-      <h1 class="title is-1 has-text-centered"><strong>Enlightenment</strong></h1>
+      <h1 class="title is-1 has-text-centered title is-italic is-family-serif">Enlightenment</h1>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </header>
 
-    <div class="columns has-text-centered">
-      <div class="column">
-            <select name="medium" id= "medium">
-              <option value="">Era</option>
-              <option value="era=8000-2000%20B.C.">B.C. 8000-2000</option>
-              <option value="era=2000-1000%20B.C.">B.C. 2000-1000</option>
-              <option value="era=1000%20B.C.-A.D.%201">B.C. 1000-A.D. 1</option>
-              <option value="era=A.D.%20500-1000">A.D. 500-1000</option>
-              <option value="era=A.D.%201000-1400">A.D. 1000-1400</option>
-              <option value="era=A.D.%201400-1600">A.D. 1400-1600</option>
-              <option value="era=A.D.%201600-1800">A.D. 1600-1800</option>
-              <option value="era=A.D.%201800-1900">A.D. 1800-1900</option>
-              <option value="era=A.D.%201900-present">A.D. 1900-Present</option>
-              
-              <option value=""></option>
-            </select>
-      </div>
-      <div class="column">
-        <select name="materials" id= "type-materials">
-          <option value="">Material</option>
-          <option value="Painting">Painting</option>
-          <option value="material=Clay">Clay</option>
-          <option value="Sculpture">Sculpture</option>
-        </select>
-      </div>
-      <div class="column">
-        <select name="locations" id= "areas">
-          <option value="">Location</option>
-          <option value="Italy">Italy</option>
-          <option value="Spain">Spain</option>
-          <option value="France">France</option>
-          <option value="Greece">Greece</option>
-        </select>
-      </div>
+  <div class="columns has-text-centered">
+    <div class="column">
+      <select name="medium" id="medium">
+        <option value="">Era</option>
+        <option value="era=8000-2000%20B.C.">B.C. 8000-2000</option>
+        <option value="era=2000-1000%20B.C.">B.C. 2000-1000</option>
+        <option value="era=1000%20B.C.-A.D.%201">B.C. 1000-A.D. 1</option>
+        <option value="era=A.D.%20500-1000">A.D. 500-1000</option>
+        <option value="era=A.D.%201000-1400">A.D. 1000-1400</option>
+        <option value="era=A.D.%201400-1600">A.D. 1400-1600</option>
+        <option value="era=A.D.%201600-1800">A.D. 1600-1800</option>
+        <option value="era=A.D.%201800-1900">A.D. 1800-1900</option>
+        <option value="era=A.D.%201900-present">A.D. 1900-Present</option>
+
+        <option value=""></option>
+      </select>
     </div>
-
-
-    <div class="box has-text-centered">
-
-      <output id="discoverSearch"class="button is-large is-info is-fullwidth is-outlined">Discover</a>
-
+    <div class="column">
+      <select name="materials" id="type-materials">
+        <option value="">Material</option>
+        <option value="Painting">Painting</option>
+        <option value="material=Clay">Clay</option>
+        <option value="Sculpture">Sculpture</option>
+      </select>
     </div>
-
-      
-   
-        
-    <!-- is-clickable -->
-  <div class="container">
-    <div id="row-one" class="columns  is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd has-text-centered">
-      <!-- Images generated here -->
-    </div>
-      </div>
-    <div class="content ">
-    <div id="row-two" class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd has-text-centered">
-      <!-- Images generated here -->
+    <div class="column">
+      <select name="locations" id="areas">
+        <option value="">Location</option>
+        <option value="Italy">Italy</option>
+        <option value="Spain">Spain</option>
+        <option value="France">France</option>
+        <option value="Greece">Greece</option>
+      </select>
     </div>
   </div>
 
+
+  <div class="box has-text-centered">
+    <output id="discoverSearch" class="button is-large is-info is-fullwidth is-outlined" type="submit">Discover</a>
+  </div>
+
+    <div class="container">
+      <div id="row-one"
+        class="columns  is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd has-text-centered">
+        <!-- Images generated here -->
+      </div>
+    </div>
+    <div class="content ">
+      <div id="row-two"
+        class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd has-text-centered">
+        <!-- Images generated here -->
+      </div>
+    </div>
 
   <p>
   <div class="box has-text-centered">
     <a href="favorites.html" class="button is-large is-danger is-fullwidth is-outlined">Collection</a>
-    
+
     <a href="titlepage.html" class="button is-large is-success is-fullwidth is-outlined">Home</a>
   </div>
   </p>
 
-
   <script src="./assets/defaultPoem.js"></script>
-
   <script src="./assets/script.js"></script>
-
-
-
 </body>
 
 </html>
