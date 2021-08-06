@@ -22,43 +22,85 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </header>
 
-  <div class="columns has-text-centered">
-    <div class="column">
-      <select name="medium" id="medium">
-        <option value="">Era</option>
-        <option value="era=8000-2000%20B.C.">B.C. 8000-2000</option>
-        <option value="era=2000-1000%20B.C.">B.C. 2000-1000</option>
-        <option value="era=1000%20B.C.-A.D.%201">B.C. 1000-A.D. 1</option>
-        <option value="era=A.D.%20500-1000">A.D. 500-1000</option>
-        <option value="era=A.D.%201000-1400">A.D. 1000-1400</option>
-        <option value="era=A.D.%201400-1600">A.D. 1400-1600</option>
-        <option value="era=A.D.%201600-1800">A.D. 1600-1800</option>
-        <option value="era=A.D.%201800-1900">A.D. 1800-1900</option>
-        <option value="era=A.D.%201900-present">A.D. 1900-Present</option>
+    <div class="columns has-text-centered">
+      <div class="column">
+            <select name="medium" id= "medium">
+              <option value="">Era</option>
+              <option id="1" value="era=8000-2000%20B.C.">B.C. 8000-2000</option>
+              <option id="1" value="era=2000-1000%20B.C.">B.C. 2000-1000</option>
+              <option id="1" value="era=1000%20B.C.-A.D.%201">B.C. 1000-A.D. 1</option>
+              <option id="1" value="era=A.D.%20500-1000">A.D. 500-1000</option>
+              <option id="1" value="era=A.D.%201000-1400">A.D. 1000-1400</option>
+              <option id="1" value="era=A.D.%201400-1600">A.D. 1400-1600</option>
+              <option id="1" value="era=A.D.%201600-1800">A.D. 1600-1800</option>
+              <option id="1" value="era=A.D.%201800-1900">A.D. 1800-1900</option>
+              <option id="1" value="era=A.D.%201900-present">A.D. 1900-Present</option>
+              
+              <option id="1" value=""></option>
+            </select>
+      </div>
+      <div class="column">
+        <select name="materials" id= "type-materials">
+          <option value="">Material</option>
+          <option id="1" value="material=Albumen">Albumen</option>
+          <option id="1" value="material=Armor">Armor</option>
+          <option id="1" value="material=Books">Books</option>
+          <option id="1" value="material=Canvas">Canvas</option>
+          <option id="1" value="material=Ceramics">Ceramics</option>
+          <option id="1" value="material=Clay">Clay</option>
+          <option id="1" value="material=Copper">Copper</option>
+          <option id="1" value="material=Copper%20alloy">Copper alloy</option>
+          <option id="1" value="material=Costume">Costume</option>
+          <option id="1" value="material=Drawings">Drawings</option>
+          <option id="1" value="material=Engraving">Engraving</option>
+          <option id="1" value="material=Ephemera">Ephemera</option>
+          <option id="1" value="material=Etching">Etching</option>
+          <option id="1" value="material=Film">Film</option>
+          <option id="1" value="material=Glass">Glass</option>
+          <option id="1" value="material=Gold">Gold</option>
+          <option id="1" value="material=Ink">Ink</option>
+          <option id="1" value="material=Iron%20alloy">Iron Alloy</option>
+          <option id="1" value="material=Iron%20and%20iron%20alloy">Iron and Iron Alloy</option>
+          <option id="1" value="material=Leather">Leather</option>
+          <option id="1" value="material=Lithographs">Lithographs</option>
+          <option id="1" value="material=Metal">Metal</option>
+          <option id="1" value="material=Negatives">Negatives</option>
+          <option id="1" value="material=Oil%20paint">Oil Paint</option>
+          <option id="1" value="material=Paintings">Paintings</option>
+          <option id="1" value="material=Paper">Paper</option>
+          <option id="1" value="material=Photographs">Photographs</option>
+          <option id="1" value="material=Planographic%20prints">Planographic Prints</option>
+          <option id="1" value="material=Prints">Prints</option>
+          <option id="1" value="material=Sculpture">Sculpture</option>
+          <option id="1" value="material=Silk">Silk</option>
+          <option id="1" value="material=Silver">Silver</option>
+          <option id="1" value="material=Steel">Steel</option>
+          <option id="1" value="material=Terracotta">Terracotta</option>
+          <option id="1" value="material=Textiles">Textiles</option>
+          <option id="1" value="material=Vases">Vases</option>
+          <option id="1" value="material=Vessels">Vessels</option>
+          <option id="1" value="material=Watercolors">Watercolors</option>
+          <option id="1" value="material=Wood">Wood</option>
 
-        <option value=""></option>
-      </select>
-    </div>
-    <div class="column">
-      <select name="materials" id="type-materials">
-        <option value="">Material</option>
-        <option value="Painting">Painting</option>
-        <option value="material=Clay">Clay</option>
-        <option value="Sculpture">Sculpture</option>
-      </select>
-    </div>
-    <div class="column">
-      <select name="locations" id="areas">
-        <option value="">Location</option>
-        <option value="Italy">Italy</option>
-        <option value="Spain">Spain</option>
-        <option value="France">France</option>
-        <option value="Greece">Greece</option>
-      </select>
-    </div>
-  </div>
-
-
+        </select>
+      </div>
+      <div class="column">
+        <select name="locations" id= "areas">
+          <option value="">Location</option>
+          <option id="1" value="geolocation=Africa">Africa</option>
+          <option id="1" value="geolocation=Asia">Asia</option>
+          <option id="1" value="geolocation=China">China</option>
+          <option id="1" value="geolocation=Europe">Europe</option>
+          <option id="1" value="geolocation=France">France</option>
+          <option id="1" value="geolocation=Germany">Germany</option>
+          <option id="1" value="geolocation=Iran">Iran</option>
+          <option id="1" value="geolocation=Italy">Italy</option>
+          <option id="1" value="geolocation=North%20and%20Central%20America">North and Central America</option>
+          <option id="1" value="geolocation=United%20Kingdom">United Kingdom</option>
+          <option id="1" value="geolocation=United%20States">United States</option>
+        </select>
+      </div>
+  
   <div class="box has-text-centered">
     <output id="discoverSearch" class="button is-large is-info is-fullwidth is-outlined" type="submit">Discover</a>
   </div>
