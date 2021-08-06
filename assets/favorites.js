@@ -23,6 +23,7 @@ function loadImages() {
     }
     let uniqueFavs = favObjects.filter((v, i, a,) => a.indexOf(v) === i);
     for (let i = 0; i < uniqueFavs.length; i++) {
+        let newContainer = $("<div>").addClass("columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd has-text-centered");
         let favBtn = $("<button>").addClass("button is-fullwidth is-light is-primary").html("❤️");
         let imgDiv = $("<div>").addClass("column testHere is-clickable");
         let imgFigure = $("<figure>").addClass("image");
