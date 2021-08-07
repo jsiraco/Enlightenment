@@ -1,9 +1,6 @@
 
 //All public domain metmuseum images
 //only public domain images can have image URL accessed
-//https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&q=isPublicDomain
-//https://collectionapi.metmuseum.org/public/collection/v1/search?q=textiles&q=isPublicDomain
-//&q=
 
 let requestIdUrl = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=isPublicDomain"
 let imgContainerOne = $("#row-one");
@@ -16,10 +13,6 @@ let era = "";
 
 apiObjects = [];
 favObjects = [];
-
-//Use event handlers to change these values
-//Mats: cermaics, furniture, paintings, sculpture, textiles
-//GeoLocation: asia, europe, africa, 
 
 $("#discoverSearch").on("click", function () {
     imgContainerOne.html("");
@@ -91,7 +84,6 @@ function buildImageRowOne(response) {
         //adds image to a favorite array
         testBtn.on("click", function () {
             testBtn.html("❤️");
-            console.log("like");
             favObjects.push(response.primaryImageSmall);
             localStorage.setItem("likes", JSON.stringify(favObjects));
         })
