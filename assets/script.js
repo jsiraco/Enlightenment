@@ -23,7 +23,8 @@ favObjects = [];
 
 $("#discoverSearch").on("click", function () {
 
-    //location.reload();
+    imgContainerOne.html("");
+    imgContainerTwo.html("");
 
     let eraRaw = document.getElementById("medium");
     let eraResult = eraRaw.options[eraRaw.selectedIndex].value;
