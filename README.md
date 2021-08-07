@@ -18,6 +18,7 @@ I can reference, use, or view them at my leisure
 ### Github
 *Here* is the deployed site: https://jsiraco.github.io/group-2-project-1/
 *Here* is the repository: https://github.com/jsiraco/group-2-project-1
+*Here* is the slideshow: https://docs.google.com/presentation/d/11eQXTHzyxKpEzzFupbHSmfd2_bB1uT3gpLYGF8E3lRo/edit?usp=sharing
 
 ## Screenshots
 ![Poem Page](https://user-images.githubusercontent.com/83827081/128585172-9b20fa69-a180-4bb5-bcfa-ef4083ddda10.png)
