@@ -1,4 +1,5 @@
 const favContainter = $(".favorites-here");
+const otherFavContainer = $(".other-favorites-here");
 const nofavs = $(".no-favorites-yet");
 
 favObjects = [];
@@ -23,19 +24,23 @@ function loadImages() {
     }
     let uniqueFavs = favObjects.filter((v, i, a,) => a.indexOf(v) === i);
     for (let i = 0; i < uniqueFavs.length; i++) {
-        let newContainer = $("<div>").addClass("columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd has-text-centered");
         let favBtn = $("<button>").addClass("button is-fullwidth is-light is-primary").html("❤️");
-        let imgDiv = $("<div>").addClass("column testHere is-clickable");
+        let imgDiv = $("<div>").addClass("column testHere is-clickable margin");
         let imgFigure = $("<figure>").addClass("image");
         let imgSrc = $(`<img src='${uniqueFavs[i]}'>`).addClass("spaced-image");
 
         imgFigure.append(imgSrc, favBtn);
         imgDiv.append(imgFigure);
-        favContainter.append(imgDiv);
+
+        if (i % 2) {
+            otherFavContainer.append(imgDiv);
+        } else {
+
+            favContainter.append(imgDiv);
+        }
 
         imgSrc.on("click", function () {
             window.open(uniqueFavs[i], "_blank");
-            console.log("click");
         })
 
         favBtn.on("click", function () {

@@ -9,14 +9,9 @@ body {
   height: 100vh;
 }
 
-#enlightenment-title {
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
 
 .enlightenment-title {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  font-style: italic;
 }
 
 #poem {
@@ -87,7 +82,7 @@ img.spaced-image {
   justify-content: space-between;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  filter: drop-shadow(10px 10px 4px rgb(65, 65, 65));
+  filter: drop-shadow(-10px 48px 6px rgb(65, 65, 65));
 }
 
 figure.image:hover {
