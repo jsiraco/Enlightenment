@@ -27,12 +27,13 @@ $("#discoverSearch").on("click", function () {
     let locationRaw = document.getElementById("areas");
     let locationResult = locationRaw.options[locationRaw.selectedIndex].value;
 
+    let medium = "&" + materialResult;
     let geoLocation = "&" + locationResult;
     let era = "&" + eraResult;
     console.log(eraResult)
 
     $.ajax({
-        url: requestIdUrl + materialResult + geoLocation + era,
+        url: requestIdUrl + medium + geoLocation + era,
         method: "GET",
     }).then(function (response) {
         console.log(response);
@@ -42,7 +43,7 @@ $("#discoverSearch").on("click", function () {
             buildImageRowTwo(response);
         }
     })
-    let tester = requestIdUrl + era + geoLocation + materials;
+    let tester = requestIdUrl + era + geoLocation + medium;
     console.log(tester);
 });
 

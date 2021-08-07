@@ -1,5 +1,5 @@
 # Enlightenment Overview
-The purpose of this project is to create an application that will allow a user to discover various kids of art.
+The purpose of this project is to create an application that will allow a user to discover various kinds of art.
 It is similar to pintrest in presentation, will allow a user to browse art, discover poetry, and save art to their own collection.
 ## Tools used 
 JQuery, Bulma, the Met Museum API, and the Poemist API were all used, as well as local storage
@@ -12,12 +12,13 @@ Student/Enthusiast of art
 ### I want to
 Browse art, learn some details, and save art to my favourites
 ### So that 
-I can refernce, use, or view them at my leisure
+I can reference, use, or view them at my leisure
 
 ## links 
 ### Github
 *Here* is the deployed site: https://jsiraco.github.io/group-2-project-1/
 *Here* is the repository: https://github.com/jsiraco/group-2-project-1
+*Here* is the slideshow: https://docs.google.com/presentation/d/11eQXTHzyxKpEzzFupbHSmfd2_bB1uT3gpLYGF8E3lRo/edit?usp=sharing
 
 ## Screenshots
 ![Poem Page](https://user-images.githubusercontent.com/83827081/128585172-9b20fa69-a180-4bb5-bcfa-ef4083ddda10.png)
@@ -29,3 +30,5 @@ I can refernce, use, or view them at my leisure
 
 ![Favorites Page](https://user-images.githubusercontent.com/83827081/128585202-fad31ebf-1352-41a3-8f1a-68ebfbe9aa3c.jpg)
 ![A screenshot of a user's favorites page, popualted with their liked images, as well as button to remove liked images, and discover and home buttons]
+
+## @Copyright 20XX productions 2021
