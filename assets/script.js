@@ -23,8 +23,6 @@ favObjects = [];
 
 $("#discoverSearch").on("click", function () {
 
-    //location.reload();
-
     let eraRaw = document.getElementById("medium");
     let eraResult = eraRaw.options[eraRaw.selectedIndex].value;
 
@@ -34,17 +32,16 @@ $("#discoverSearch").on("click", function () {
     let locationRaw = document.getElementById("areas");
     let locationResult = locationRaw.options[locationRaw.selectedIndex].value;
 
-    let materials = "&" + materialResult;
     let geoLocation = "&" + locationResult;
     let era = "&" + eraResult;
     console.log(eraResult)
 
     $.ajax({
-        url: requestIdUrl + era + geoLocation + materials,
+        url: requestIdUrl + materialResult + geoLocation + era,
         method: "GET",
     }).then(function (response) {
         console.log(response);
-        console.log("working")
+        console.log("generating url")
         for (let i = 0; i < 4; i++) {
             buildImageRowOne(response);
             buildImageRowTwo(response);
