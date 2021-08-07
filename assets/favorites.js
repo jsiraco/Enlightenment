@@ -13,10 +13,6 @@ function init() {
     loadImages();
 }
 
-function buildRows(event) {
-
-}
-
 function loadImages() {
     if (favObjects.length == 0) {
         nofavs.removeClass("no-favorites-yet");
@@ -46,7 +42,10 @@ function loadImages() {
         favBtn.on("click", function () {
             favBtn.html("🖤");
             console.log(uniqueFavs[i]);
-            favObjects.pop(uniqueFavs[i]);
+            let removeItem = uniqueFavs[i];
+            favObjects = $.grep(favObjects, function(event) {
+                return event != removeItem;
+            })
             localStorage.setItem("likes", JSON.stringify(favObjects));
         })
     }
