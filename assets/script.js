@@ -22,8 +22,8 @@ favObjects = [];
 //GeoLocation: asia, europe, africa, 
 
 $("#discoverSearch").on("click", function () {
-
-    //location.reload();
+    imgContainerOne.html("");
+    imgContainerTwo.html("");
 
     let eraRaw = document.getElementById("medium");
     let eraResult = eraRaw.options[eraRaw.selectedIndex].value;
@@ -34,17 +34,16 @@ $("#discoverSearch").on("click", function () {
     let locationRaw = document.getElementById("areas");
     let locationResult = locationRaw.options[locationRaw.selectedIndex].value;
 
-    let materials = "&" + materialResult;
     let geoLocation = "&" + locationResult;
     let era = "&" + eraResult;
     console.log(eraResult)
 
     $.ajax({
-        url: requestIdUrl + era + geoLocation + materials,
+        url: requestIdUrl + materialResult + geoLocation + era,
         method: "GET",
     }).then(function (response) {
         console.log(response);
-        console.log("working")
+        console.log("generating url")
         for (let i = 0; i < 4; i++) {
             buildImageRowOne(response);
             buildImageRowTwo(response);
@@ -54,14 +53,7 @@ $("#discoverSearch").on("click", function () {
     console.log(tester);
 });
 
-
-
-
-
-
-
-// console.log(requestIdUrl + `&q=${materials}`);
-
+//get favorites if there are any
 function onPageLoad() {
     let storedFavs = JSON.parse(localStorage.getItem("likes"));
     if (storedFavs !== null) {
@@ -90,11 +82,13 @@ function buildImageRowOne(response) {
         imgDiv.append(imgFigure);
         imgContainerOne.append(imgDiv);
 
+        //opens a seperate page to learn more about the art
         imgSrc.on("click", function () {
             window.open(response.objectURL, "_blank");
             console.log("click");
         })
 
+        //adds image to a favorite array
         testBtn.on("click", function () {
             testBtn.html("❤️");
             console.log("like");
@@ -105,7 +99,7 @@ function buildImageRowOne(response) {
     });
 }
 
-//Builds the second row of images
+//Builds the second row of images, has the same functions as the first
 function buildImageRowTwo(response) {
     $.ajax({
         url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],

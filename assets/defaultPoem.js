@@ -119,7 +119,6 @@ $.ajax({
     let txt3 = $("<p>").addClass("poemPoet").html(author1);
 
     poemHome.append(txt1, txt2, txt3);  
-    console.log(response.ok)
     if(response.status == false) {
         backup();
     }
