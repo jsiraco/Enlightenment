@@ -93,12 +93,20 @@ let backupPoem = [
 
 let poemHome = $("#poem");
 let requestPoemUrl = `https://www.poemist.com/api/v1/randompoems`;
+let txt1="";
+let txt2="";
+let txt3="";
 
 
 $.ajax({
     url: requestPoemUrl,
     method: "GET",
+    dataType: "json",
+    error: function (response, textatatus, xhr){
+        backup();
+    }
 }).then(function (response) {
+
     let text1 = response[0].title;
     let text2 = response[0].content;
 
@@ -110,21 +118,29 @@ $.ajax({
     let txt2 = $("<p>").addClass("poemContent").html(text2);
     let txt3 = $("<p>").addClass("poemPoet").html(author1);
 
-    $(poemHome).append(txt1, txt2, txt3);
-}) .catch(backup());
+    poemHome.append(txt1, txt2, txt3);  
+    console.log(response.ok)
+    if(response.status == false) {
+        backup();
+    }
+    })
 
 function backup() {
+
+
+    console.log("backup Running")
     let bu1 = backupPoem[Math.floor(Math.random() * backupPoem.length)].title;
     let bu2 = backupPoem[Math.floor(Math.random() * backupPoem.length)].content;
     let buAuthor = backupPoem[Math.floor(Math.random() * backupPoem.length)].poet.name;
 
     let buAuthor1 = JSON.stringify(buAuthor);
 
-    let txt1 = $("<h1>").addClass("poemTitle").html(bu1);
-    let txt2 = $("<p>").addClass("poemContent").html(bu2);
-    let txt3 = $("<p>").addClass("poemPoet").html(buAuthor1);
+    let ntt1 = $("<h1>").addClass("poemTitle").text(bu1);
+    let ntt2 = $("<p>").addClass("poemContent").text(bu2);
+    let ntt3 = $("<p>").addClass("poemPoet").text(buAuthor1);
 
-    $(poemHome).append(txt1, txt2, txt3);
-    console.log("Too many requests!");
+    poemHome.removeClass(txt1, txt2, txt3)
+
+    poemHome.append(ntt1, ntt2, ntt3);
 
 }
