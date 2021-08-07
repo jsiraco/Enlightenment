@@ -13,10 +13,6 @@ function init() {
     loadImages();
 }
 
-function buildRows(event) {
-
-}
-
 function loadImages() {
     if (favObjects.length == 0) {
         nofavs.removeClass("no-favorites-yet");
