@@ -10,7 +10,7 @@ For future development, mulitple APIs should be used to gether images, as having
 ### As A
 Student/Enthusiast of art
 ### I want to
-Browse art, learn some details, and save it to my favourites
+Browse art, learn some details, and save art to my favourites
 ### So that 
 I can refernce, use, or view them at my leisure
 
