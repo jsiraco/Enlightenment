@@ -22,6 +22,8 @@ favObjects = [];
 //GeoLocation: asia, europe, africa, 
 
 $("#discoverSearch").on("click", function () {
+    imgContainerOne.html("");
+    imgContainerTwo.html("");
 
     let eraRaw = document.getElementById("medium");
     let eraResult = eraRaw.options[eraRaw.selectedIndex].value;
@@ -51,14 +53,7 @@ $("#discoverSearch").on("click", function () {
     console.log(tester);
 });
 
-
-
-
-
-
-
-// console.log(requestIdUrl + `&q=${materials}`);
-
+//get favorites if there are any
 function onPageLoad() {
     let storedFavs = JSON.parse(localStorage.getItem("likes"));
     if (storedFavs !== null) {
@@ -87,11 +82,13 @@ function buildImageRowOne(response) {
         imgDiv.append(imgFigure);
         imgContainerOne.append(imgDiv);
 
+        //opens a seperate page to learn more about the art
         imgSrc.on("click", function () {
             window.open(response.objectURL, "_blank");
             console.log("click");
         })
 
+        //adds image to a favorite array
         testBtn.on("click", function () {
             testBtn.html("❤️");
             console.log("like");
@@ -102,7 +99,7 @@ function buildImageRowOne(response) {
     });
 }
 
-//Builds the second row of images
+//Builds the second row of images, has the same functions as the first
 function buildImageRowTwo(response) {
     $.ajax({
         url: requestUrl + response.objectIDs[Math.floor(Math.random() * response.objectIDs.length)],
