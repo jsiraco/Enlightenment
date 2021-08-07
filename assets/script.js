@@ -44,6 +44,7 @@ $("#discoverSearch").on("click", function () {
         method: "GET",
     }).then(function (response) {
         console.log(response);
+        console.log("working")
         for (let i = 0; i < 4; i++) {
             buildImageRowOne(response);
             buildImageRowTwo(response);
