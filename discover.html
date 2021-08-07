@@ -25,10 +25,10 @@
     <div class="column">
       <select name="medium" id="medium">
         <option value="">Era</option>
-        <option value="dateBegin=8000&dateEnd=2000">B.C. 8000-2000</option>
-        <option value="dateBegin=2000&dateEnd=1000">B.C. 2000-1000</option>
-        <option value="dateBegin=1000&dateEnd=1">B.C. 1000-A.D. 1</option>
-        <option value="dateBegin=500&dateEnd=1000">A.D. 500-1000</option>
+        <option value="dateBegin8000=&dateEnd2000=">B.C. 8000-2000</option>
+        <option value="dateBegin2000=&dateEnd=1000">B.C. 2000-1000</option>
+        <option value="dateBegin1000=&dateEnd=1">B.C. 1000-A.D. 1</option>
+        <option value="dateBegin500=&dateEnd=1000">A.D. 500-1000</option>
         <option value="dateBegin=1000&dateEnd=1400">A.D. 1000-1400</option>
         <option value="dateBegin=14000&dateEnd=1600">A.D. 1400-1600</option>
         <option value="dateBegin=1600&dateEnd=1700">A.D. 1600-1700</option>
@@ -48,17 +48,18 @@
       </select>
     </div>
     <div class="column">
-
-      <select name="locations" id="areas">
-        <option value="">Location</option>
-        <option value="geoLocation=Africa">Africa</option>
-        <option value="geoLocation=Asia">Asia</option>
-        <option value="geoLocation=Australia">Australia</option>
-        <option value="geoLocation=Europe">Europe</option>
-        <option value="geoLocation=NorthAmerica">North America</option>
+      <div class="column">
+        <select name="locations" id="areas">
+          <option value="">Location</option>
+          <option value="geoLocation=Africa">Africa</option>
+          <option value="geoLocation=Asia">Asia</option>
+          <option value="geoLocation=Europe">Europe</option>
+          <option value="geoLocation=NorthAmerica">North America</option>
         <option value="geoLocation=SouthAmerica">South America</option>
-
-      </select>
+        </select>
+      </div>
+    </div>
+  </div>
 
   <div class="box has-text-centered">
     <output id="discoverSearch" class="button is-large is-info is-fullwidth is-outlined" type="submit">Discover</a>
@@ -74,7 +75,6 @@
     <div id="row-two"
       class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd has-text-centered">
       <!-- Images generated here -->
-
     </div>
   </div>
 
