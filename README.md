@@ -30,3 +30,5 @@ I can reference, use, or view them at my leisure
 
 ![Favorites Page](https://user-images.githubusercontent.com/83827081/128585202-fad31ebf-1352-41a3-8f1a-68ebfbe9aa3c.jpg)
 ![A screenshot of a user's favorites page, popualted with their liked images, as well as button to remove liked images, and discover and home buttons]
+
+## @Copyright 20XX productions 2021
