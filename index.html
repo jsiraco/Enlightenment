@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,100 +9,31 @@
   <link rel="stylesheet" href="assets\style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <title>Enlightenment</title>
-  <link rel="shortcut icon" type="image/png" href="assets/enlightenment.png"/>
+  <link rel="shortcut icon" type="image/png" href="assets/enlightenment.png" />
 </head>
+
+<body>
   <header>
     <h1 class="title is-1 has-text-centered is-family-serif enlightenment-title">Enlightenment</h1>
-    <h2 id = "enlightenment-title" class="subtitle has-text-centered"><strong>"Poem of the Day"</strong></h2>
+    <h2 id="enlightenment-title" class="subtitle has-text-centered"><strong>"Poem of the Day"</strong></h2>
   </header>
-  
-    <div class="columns has-text-centered">
-      <div class="column">
-            <select name="medium" id= "medium">
-              <option value="">Era</option>
-              <option value="dateBegin8000=&dateEnd2000=">B.C. 8000-2000</option>
-              <option value="dateBegin2000=&dateEnd=1000">B.C. 2000-1000</option>
-              <option value="dateBegin1000=&dateEnd=1">B.C. 1000-A.D. 1</option>
-              <option value="dateBegin500=&dateEnd=1000">A.D. 500-1000</option>
-              <option value="dateBegin=1000&dateEnd=1400">A.D. 1000-1400</option>
-              <option value="dateBegin=14000&dateEnd=1600">A.D. 1400-1600</option>
-              <option value="dateBegin=1600&dateEnd=1700">A.D. 1600-1700</option>
-              <option value="dateBegin=1700&dateEnd=1800">A.D. 1700-1800</option>
-              <option value="dateBegin=1800&dateEnd=1900">A.D. 1800-1900</option>
-              <option value="dateBegin=1900&dateEnd=2021">A.D. 1900-Present</option>
-            </select>
-      </div>
-      <div class="column">
-        <select name="material" id= "type-materials">
-          <option value="">Medium</option>
-          <option value="medium=Textiles">Textiles</option>
-          <option value="medium=Paintings">Paintings</option>
-          <option value="medium=Ceramics">Ceramics</option>
-          <option value="medium=Sculpture">Sculpture</option>
-          <option value="medium=Photographs">Photographs</option>
 
-        </select>
-      </div>
-      <div class="column">
-        <select name="locations" id= "areas">
-          <option value="">Location</option>
-          <option value="geoLocation=Africa">Africa</option>
-          <option value="geoLocation=Asia">Asia</option>
-          <option value="geoLocation=China">China</option>
-          <option value="geoLocation=Europe">Europe</option>
-          <option value="geoLocation=France">France</option>
-          <option value="geoLocation=Germany">Germany</option>
-          <option value="geoLocation=Iran">Iran</option>
-          <option value="geoLocation=Italy">Italy</option>
-          <option value="geoLocation=North%20and%20Central%20America">North and Central America</option>
-          <option value="geoLocation=United%20Kingdom">United Kingdom</option>
-          <option value="geoLocation=United%20States">United States</option>
-        </select>
-      </div> 
-    </div>
-
-  <div class="box has-text-centered">
-    <output id="discoverSearch" class="button is-large is-info is-fullwidth is-outlined" type="submit">Discover</a>
+  <p class="mr-0 pt-3 has-text-centered">
+  <div class="content has-text-centered">
   </div>
 
-    <div class="container">
-      <div id="row-one"
-        class="columns  is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd has-text-centered">
-        <!-- Images generated here -->
-      </div>
-    </div>
-    <div class="content ">
-      <div id="row-two"
-        class="columns is-variable is-1-mobile is-0-tablet is-3-desktop is-8-widescreen is-2-fullhd has-text-centered">
-        <!-- Images generated here -->
-      </div>
-    </div>
+  <div id="poem" class="content has-text-centered"></div>
+  <div class="content has-text-centered"></div>
+  </p>
 
   <p>
   <div class="box has-text-centered">
+    <a href="discover.html" class="button is-large is-info is-fullwidth is-outlined">Discover</a>
     <a href="favorites.html" class="button is-large is-danger is-fullwidth is-outlined">Collection</a>
-
-    <a href="index.html" class="button is-large is-success is-fullwidth is-outlined">Home</a>
   </div>
   </p>
+</body>
 
+<script src="./assets/defaultPoem.js"></script>
 
-    <body>
-  <p class="mr-0 pt-3 has-text-centered">
-    <div class= "content has-text-centered">
-        </div>
-
-    <div id="poem" class= "content has-text-centered"></div>
-    <div class= "content has-text-centered"></div>
-
-    </p>
-    <p>
-      <div class="box has-text-centered">
-        <a href="discover.html" class="button is-large is-info is-fullwidth is-outlined">Discover</a>
-        <a href="favorites.html" class="button is-large is-danger is-fullwidth is-outlined">Collection</a>
-      </div>
-    </p>
-  </body>
-
-  <script src="./assets/defaultPoem.js"></script>
 </html>
