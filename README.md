@@ -16,8 +16,8 @@ I can reference, use, or view them at my leisure
 
 ## links 
 ### Github
-*Here* is the deployed site: https://jsiraco.github.io/group-2-project-1/
-*Here* is the repository: https://github.com/jsiraco/group-2-project-1
+*Here* is the deployed site: https://jsiraco.github.io/Enlightenment/
+*Here* is the repository: https://github.com/jsiraco/Enlightenment/
 *Here* is the slideshow: https://docs.google.com/presentation/d/11eQXTHzyxKpEzzFupbHSmfd2_bB1uT3gpLYGF8E3lRo/edit?usp=sharing
 
 ## Screenshots
